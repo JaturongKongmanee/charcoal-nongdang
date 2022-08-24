@@ -1,0 +1,18 @@
+//- Load Facebook SDK for JavaScript
+#fb-root
+    script.
+        window.fbAsyncInit = function() {
+            FB.init({
+            xfbml            : true,
+            version          : 'v8.0'
+            });
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    //- Your Chat Plugin code
+    .fb-customerchat(attribution=setup_tool, page_id="108976637644431", theme_color="#0A7CFF", logged_in_greeting="Hi! How can we help you? สวัสดีค่ะ ควิคทะเบียน ยินดีให้บริการค่ะ 😃", logged_out_greeting="Hi! How can we help you? สวัสดีค่ะ ควิคทะเบียน ยินดีให้บริการค่ะ 😃")
